@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('client');
             $table->text('description')->nullable();
             $table->string('url');
+            $table->string('thumb')->nullable();
             $table->string('slug');
             $table->softDeletes();
-            $table->string('thumb');
 
             $table->timestamps();
         });
