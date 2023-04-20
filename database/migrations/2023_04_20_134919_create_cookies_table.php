@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('cookies', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->unique();
+            $table->string('client');
+            $table->text('description')->nullable();
+            $table->string('url');
+            $table->string('slug');
+            $table->softDeletes();
+            $table->string('thumb');
+
             $table->timestamps();
         });
     }
