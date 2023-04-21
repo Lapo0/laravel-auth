@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row text-center">
             <h1>
-                BENVENUTO NEL SITO DEI BISCOTTI
+                EDIT
             </h1>
         </div>
     </div>

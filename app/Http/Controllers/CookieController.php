@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\cookie;
+use App\Models\Cookie;
 use App\Http\Requests\StorecookieRequest;
 use App\Http\Requests\UpdatecookieRequest;
 
@@ -15,7 +15,9 @@ class CookieController extends Controller
      */
     public function index()
     {
-        //
+        $cookies = Cookie::all();
+
+        return view('cookies.index', compact('cookies'));
     }
 
     /**
@@ -25,7 +27,7 @@ class CookieController extends Controller
      */
     public function create()
     {
-        //
+        return view('cookies.create');
     }
 
     /**
@@ -45,9 +47,9 @@ class CookieController extends Controller
      * @param  \App\Models\cookie  $cookie
      * @return \Illuminate\Http\Response
      */
-    public function show(cookie $cookie)
+    public function show(Cookie $cookie)
     {
-        //
+        return view('cookies.show', compact('cookie'));
     }
 
     /**
@@ -56,9 +58,9 @@ class CookieController extends Controller
      * @param  \App\Models\cookie  $cookie
      * @return \Illuminate\Http\Response
      */
-    public function edit(cookie $cookie)
+    public function edit(Cookie $cookie)
     {
-        //
+        return view('cookies.edit', compact('cookie'));
     }
 
     /**
@@ -68,7 +70,7 @@ class CookieController extends Controller
      * @param  \App\Models\cookie  $cookie
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatecookieRequest $request, cookie $cookie)
+    public function update(UpdatecookieRequest $request, Cookie $cookie)
     {
         //
     }

@@ -26,7 +26,7 @@ class CookieSeeder extends Seeder
             $cookie->description = $faker->sentence($faker->numberBetween(100, 200));
             $cookie->url = $faker->url();
             $cookie->thumb = $faker->imageUrl();
-            $cookie->slug = Str::slug($cookie->title, '-');
+            $cookie->slug = Str::slug($cookie->name, '-');
 
             $cookie->save();
         }
